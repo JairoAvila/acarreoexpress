@@ -76,8 +76,13 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
+	//BASE DE DATOS LOCAL
+	//'username' => 'root',
+	//'password' => '',
+	//BASE DE DATOS PRODUCCION
+	'username' => 'adminteranov',
+	'password' => 't3r4n0v2018',
+	//////////////////////////
 	'database' => 'doctrine',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
