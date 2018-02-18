@@ -22,9 +22,9 @@ class Precioreserva
     private $id;
 
     /**
-     * @var boolean
+     * @var string
      *
-     * @ORM\Column(name="embajale", type="boolean", nullable=true)
+     * @ORM\Column(name="embajale", type="string", length=50, nullable=false)
      */
     private $embajale;
 
@@ -36,9 +36,9 @@ class Precioreserva
     private $distancia;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="seguro", type="boolean", nullable=true)
+     * @ORM\Column(name="seguro", type="integer", nullable=false)
      */
     private $seguro;
 

@@ -1,7 +1,7 @@
 <?php
 
 
-
+namespace Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -22,9 +22,9 @@ class Precioreserva
     private $id;
 
     /**
-     * @var boolean
+     * @var string
      *
-     * @ORM\Column(name="embajale", type="boolean", nullable=true)
+     * @ORM\Column(name="embajale", type="string", length=50, nullable=false)
      */
     private $embajale;
 
@@ -36,9 +36,9 @@ class Precioreserva
     private $distancia;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="seguro", type="boolean", nullable=true)
+     * @ORM\Column(name="seguro", type="integer", nullable=false)
      */
     private $seguro;
 
@@ -111,7 +111,7 @@ class Precioreserva
     /**
      * Set embajale
      *
-     * @param boolean $embajale
+     * @param string $embajale
      *
      * @return Precioreserva
      */
@@ -125,7 +125,7 @@ class Precioreserva
     /**
      * Get embajale
      *
-     * @return boolean
+     * @return string
      */
     public function getEmbajale()
     {
@@ -159,7 +159,7 @@ class Precioreserva
     /**
      * Set seguro
      *
-     * @param boolean $seguro
+     * @param integer $seguro
      *
      * @return Precioreserva
      */
@@ -173,7 +173,7 @@ class Precioreserva
     /**
      * Get seguro
      *
-     * @return boolean
+     * @return integer
      */
     public function getSeguro()
     {

@@ -21,9 +21,10 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		$this->load->library('doctrine');
+		$em = $this->doctrine->em;
 
-		//$group = new Entity\UserGroup;
-		//$group->setName('UsersJairo1');
+		$paises = new Entity\Paises;
+		$paises->setNombre('Colombia');
 
 		/*$user = new Entity\User;
 		$user->setUsername('wildlyinaccurate');();
@@ -32,17 +33,15 @@ class Welcome extends CI_Controller {
 		$user->setGroup($group);*/
 
 		// When you have set up your database, you can persist these entities:
-		$em = $this->doctrine->em;
-		/*$em->persist($group);
-		// $em->persist($user);
-		$em->flush();*/
+		$em->persist($paises);
+		$em->flush();
 
 
 
-		$rsvp = $em->getRepository("Entity\\UserGroup")->find(1);
-		$nombre = $rsvp->getName();
+		//$rsvp = $em->getRepository("Entity\\UserGroup")->find(1);
+		//$nombre = $rsvp->getName();
 
-		print_r($nombre);
+		print_r($paises->getId());
 
 		/*$this->load->view('welcome_message', array(
 			'group' => $group
