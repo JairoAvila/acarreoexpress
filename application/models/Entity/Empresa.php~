@@ -1,0 +1,71 @@
+<?php
+
+
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Empresa
+ *
+ * @ORM\Table(name="empresa", indexes={@ORM\Index(name="idciudad", columns={"idciudad"})})
+ * @ORM\Entity
+ */
+class Empresa
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nombre", type="string", length=50, nullable=false)
+     */
+    private $nombre;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="NIT", type="string", length=50, nullable=false)
+     */
+    private $nit;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="responsable", type="string", length=50, nullable=false)
+     */
+    private $responsable;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="telefono", type="string", length=50, nullable=false)
+     */
+    private $telefono;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=50, nullable=false)
+     */
+    private $email;
+
+    /**
+     * @var \Ciudades
+     *
+     * @ORM\ManyToOne(targetEntity="Ciudades")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idciudad", referencedColumnName="id")
+     * })
+     */
+    private $idciudad;
+
+
+}
+

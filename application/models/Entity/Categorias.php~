@@ -1,0 +1,50 @@
+<?php
+
+
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Categorias
+ *
+ * @ORM\Table(name="categorias", indexes={@ORM\Index(name="idestado", columns={"idestado"})})
+ * @ORM\Entity
+ */
+class Categorias
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nombre", type="string", length=50, nullable=false)
+     */
+    private $nombre;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="precio", type="string", length=50, nullable=false)
+     */
+    private $precio;
+
+    /**
+     * @var \Estados
+     *
+     * @ORM\ManyToOne(targetEntity="Estados")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idestado", referencedColumnName="id")
+     * })
+     */
+    private $idestado;
+
+
+}
+

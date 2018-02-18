@@ -1,0 +1,60 @@
+<?php
+
+
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Especificacion
+ *
+ * @ORM\Table(name="especificacion", indexes={@ORM\Index(name="idreserva", columns={"idreserva"}), @ORM\Index(name="idpiso", columns={"idpiso"})})
+ * @ORM\Entity
+ */
+class Especificacion
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NewAttribute", type="integer", nullable=false)
+     */
+    private $newattribute;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="acceso", type="string", length=50, nullable=false)
+     */
+    private $acceso;
+
+    /**
+     * @var \Reservas
+     *
+     * @ORM\ManyToOne(targetEntity="Reservas")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idreserva", referencedColumnName="id")
+     * })
+     */
+    private $idreserva;
+
+    /**
+     * @var \Numero
+     *
+     * @ORM\ManyToOne(targetEntity="Numero")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idpiso", referencedColumnName="id")
+     * })
+     */
+    private $idpiso;
+
+
+}
+

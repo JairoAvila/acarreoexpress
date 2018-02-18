@@ -1,0 +1,91 @@
+<?php
+
+
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Reservas
+ *
+ * @ORM\Table(name="reservas", indexes={@ORM\Index(name="idconductor", columns={"idconductor"}), @ORM\Index(name="idestado", columns={"idestado"}), @ORM\Index(name="idusuario", columns={"idusuario"})})
+ * @ORM\Entity
+ */
+class Reservas
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descripcion", type="string", length=50, nullable=false)
+     */
+    private $descripcion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="aksalida", type="string", length=50, nullable=false)
+     */
+    private $aksalida;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="dirsalida", type="string", length=50, nullable=false)
+     */
+    private $dirsalida;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="akllegada", type="string", length=50, nullable=false)
+     */
+    private $akllegada;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="dirllegada", type="string", length=50, nullable=false)
+     */
+    private $dirllegada;
+
+    /**
+     * @var \Conductores
+     *
+     * @ORM\ManyToOne(targetEntity="Conductores")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idconductor", referencedColumnName="id")
+     * })
+     */
+    private $idconductor;
+
+    /**
+     * @var \Estados
+     *
+     * @ORM\ManyToOne(targetEntity="Estados")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idestado", referencedColumnName="id")
+     * })
+     */
+    private $idestado;
+
+    /**
+     * @var \Usuarios
+     *
+     * @ORM\ManyToOne(targetEntity="Usuarios")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idusuario", referencedColumnName="id")
+     * })
+     */
+    private $idusuario;
+
+
+}
+

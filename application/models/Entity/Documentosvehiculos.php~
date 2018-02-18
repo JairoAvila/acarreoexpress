@@ -1,0 +1,102 @@
+<?php
+
+
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Documentosvehiculos
+ *
+ * @ORM\Table(name="documentosvehiculos", indexes={@ORM\Index(name="idvehiculo", columns={"idvehiculo"}), @ORM\Index(name="idestado", columns={"idestado"})})
+ * @ORM\Entity
+ */
+class Documentosvehiculos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="pathlicencia", type="string", length=50, nullable=false)
+     */
+    private $pathlicencia;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="pathtarjetapropiedad", type="string", length=50, nullable=false)
+     */
+    private $pathtarjetapropiedad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="pathtarjetaoperacion", type="string", length=50, nullable=false)
+     */
+    private $pathtarjetaoperacion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="pathsoat", type="string", length=50, nullable=false)
+     */
+    private $pathsoat;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="pathtecnomecanica", type="string", length=50, nullable=false)
+     */
+    private $pathtecnomecanica;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cedulaconductor", type="string", length=50, nullable=false)
+     */
+    private $cedulaconductor;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="created_at", type="date", nullable=false)
+     */
+    private $createdAt;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="updated_at", type="date", nullable=false)
+     */
+    private $updatedAt;
+
+    /**
+     * @var \Vehiculos
+     *
+     * @ORM\ManyToOne(targetEntity="Vehiculos")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idvehiculo", referencedColumnName="id")
+     * })
+     */
+    private $idvehiculo;
+
+    /**
+     * @var \Estados
+     *
+     * @ORM\ManyToOne(targetEntity="Estados")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idestado", referencedColumnName="id")
+     * })
+     */
+    private $idestado;
+
+
+}
+

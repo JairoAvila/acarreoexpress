@@ -1,0 +1,33 @@
+<?php
+
+
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Tipoidentificacion
+ *
+ * @ORM\Table(name="tipoidentificacion")
+ * @ORM\Entity
+ */
+class Tipoidentificacion
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="tipo", type="string", length=50, nullable=false)
+     */
+    private $tipo;
+
+
+}
+

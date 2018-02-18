@@ -1,0 +1,148 @@
+<?php
+
+
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Vehiculos
+ *
+ * @ORM\Table(name="vehiculos", indexes={@ORM\Index(name="idestado", columns={"idestado"})})
+ * @ORM\Entity
+ */
+class Vehiculos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="placa", type="string", length=50, nullable=false)
+     */
+    private $placa;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="modelo", type="string", length=50, nullable=false)
+     */
+    private $modelo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="marcar", type="string", length=50, nullable=false)
+     */
+    private $marcar;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="color", type="string", length=50, nullable=false)
+     */
+    private $color;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="tarjetapropiedad", type="string", length=50, nullable=false)
+     */
+    private $tarjetapropiedad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="capacidad", type="string", length=50, nullable=false)
+     */
+    private $capacidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="numerochasis", type="string", length=50, nullable=false)
+     */
+    private $numerochasis;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="numerotarjetaoperacion", type="string", length=50, nullable=false)
+     */
+    private $numerotarjetaoperacion;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="expidetarjetaoperacion", type="date", nullable=false)
+     */
+    private $expidetarjetaoperacion;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="vencimientotarjetaoperacion", type="date", nullable=false)
+     */
+    private $vencimientotarjetaoperacion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="numerotecnomecanica", type="string", length=50, nullable=false)
+     */
+    private $numerotecnomecanica;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="expidetecnomecanica", type="date", nullable=false)
+     */
+    private $expidetecnomecanica;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="vencimientotecnomecanica", type="date", nullable=false)
+     */
+    private $vencimientotecnomecanica;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="numerosoat", type="string", length=50, nullable=false)
+     */
+    private $numerosoat;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="expidesoat", type="date", nullable=false)
+     */
+    private $expidesoat;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="vencimientosoat", type="integer", nullable=false)
+     */
+    private $vencimientosoat;
+
+    /**
+     * @var \Estados
+     *
+     * @ORM\ManyToOne(targetEntity="Estados")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idestado", referencedColumnName="id")
+     * })
+     */
+    private $idestado;
+
+
+}
+

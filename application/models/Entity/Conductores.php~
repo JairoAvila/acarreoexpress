@@ -1,0 +1,77 @@
+<?php
+
+
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Conductores
+ *
+ * @ORM\Table(name="conductores", indexes={@ORM\Index(name="idregistro", columns={"idregistro"}), @ORM\Index(name="idvehiculo", columns={"idvehiculo"}), @ORM\Index(name="idempresa", columns={"idempresa"})})
+ * @ORM\Entity
+ */
+class Conductores
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="numerolicencia", type="string", length=50, nullable=false)
+     */
+    private $numerolicencia;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="expidelicencia", type="string", length=50, nullable=false)
+     */
+    private $expidelicencia;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="vencimientolicencia", type="string", length=50, nullable=false)
+     */
+    private $vencimientolicencia;
+
+    /**
+     * @var \Registros
+     *
+     * @ORM\ManyToOne(targetEntity="Registros")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idregistro", referencedColumnName="id")
+     * })
+     */
+    private $idregistro;
+
+    /**
+     * @var \Vehiculos
+     *
+     * @ORM\ManyToOne(targetEntity="Vehiculos")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idvehiculo", referencedColumnName="id")
+     * })
+     */
+    private $idvehiculo;
+
+    /**
+     * @var \Empresa
+     *
+     * @ORM\ManyToOne(targetEntity="Empresa")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idempresa", referencedColumnName="id")
+     * })
+     */
+    private $idempresa;
+
+
+}
+

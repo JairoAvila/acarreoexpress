@@ -1,0 +1,47 @@
+<?php
+
+
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Tamanocasa
+ *
+ * @ORM\Table(name="tamanocasa")
+ * @ORM\Entity
+ */
+class Tamanocasa
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="tamanoinicio", type="integer", nullable=false)
+     */
+    private $tamanoinicio;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="tamanofinal", type="integer", nullable=false)
+     */
+    private $tamanofinal;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="precio", type="integer", nullable=false)
+     */
+    private $precio;
+
+
+}
+

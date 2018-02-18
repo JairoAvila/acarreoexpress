@@ -1,0 +1,101 @@
+<?php
+
+
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Precioreserva
+ *
+ * @ORM\Table(name="precioreserva", indexes={@ORM\Index(name="idreserva", columns={"idreserva"}), @ORM\Index(name="idtamano", columns={"idtamano"}), @ORM\Index(name="idsubcategoria", columns={"idsubcategoria"}), @ORM\Index(name="idayudantes", columns={"idayudantes"})})
+ * @ORM\Entity
+ */
+class Precioreserva
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="embajale", type="boolean", nullable=true)
+     */
+    private $embajale;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="distancia", type="float", precision=10, scale=0, nullable=false)
+     */
+    private $distancia;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="seguro", type="boolean", nullable=true)
+     */
+    private $seguro;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="porcentaje", type="integer", nullable=false)
+     */
+    private $porcentaje;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="total", type="integer", nullable=false)
+     */
+    private $total;
+
+    /**
+     * @var \Reservas
+     *
+     * @ORM\ManyToOne(targetEntity="Reservas")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idreserva", referencedColumnName="id")
+     * })
+     */
+    private $idreserva;
+
+    /**
+     * @var \Tamanocasa
+     *
+     * @ORM\ManyToOne(targetEntity="Tamanocasa")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idtamano", referencedColumnName="id")
+     * })
+     */
+    private $idtamano;
+
+    /**
+     * @var \Subcategoria
+     *
+     * @ORM\ManyToOne(targetEntity="Subcategoria")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idsubcategoria", referencedColumnName="id")
+     * })
+     */
+    private $idsubcategoria;
+
+    /**
+     * @var \Ayudantes
+     *
+     * @ORM\ManyToOne(targetEntity="Ayudantes")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idayudantes", referencedColumnName="id")
+     * })
+     */
+    private $idayudantes;
+
+
+}
+

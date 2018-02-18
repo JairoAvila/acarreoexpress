@@ -1,0 +1,166 @@
+<?php
+
+
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Registros
+ *
+ * @ORM\Table(name="registros", indexes={@ORM\Index(name="idpais", columns={"idpais"}), @ORM\Index(name="idtipoidentificacion", columns={"idtipoidentificacion"}), @ORM\Index(name="idlugarexpedicion", columns={"idlugarexpedicion"}), @ORM\Index(name="idciudad", columns={"idciudad"}), @ORM\Index(name="idestadoregistro", columns={"idestadoregistro"}), @ORM\Index(name="idrol", columns={"idrol"}), @ORM\Index(name="idusuario", columns={"idusuario"})})
+ * @ORM\Entity
+ */
+class Registros
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nombres", type="string", length=50, nullable=false)
+     */
+    private $nombres;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="apellidos", type="string", length=50, nullable=false)
+     */
+    private $apellidos;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="identificacion", type="string", length=50, nullable=false)
+     */
+    private $identificacion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nacimiento", type="string", length=50, nullable=false)
+     */
+    private $nacimiento;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="direccion", type="string", length=50, nullable=false)
+     */
+    private $direccion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="telefono", type="string", length=50, nullable=false)
+     */
+    private $telefono;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="pathimage", type="string", length=100, nullable=false)
+     */
+    private $pathimage;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="created_at", type="date", nullable=false)
+     */
+    private $createdAt;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="updated_at", type="date", nullable=false)
+     */
+    private $updatedAt;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="billetera", type="integer", nullable=false)
+     */
+    private $billetera;
+
+    /**
+     * @var \Paises
+     *
+     * @ORM\ManyToOne(targetEntity="Paises")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idpais", referencedColumnName="id")
+     * })
+     */
+    private $idpais;
+
+    /**
+     * @var \Tipoidentificacion
+     *
+     * @ORM\ManyToOne(targetEntity="Tipoidentificacion")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idtipoidentificacion", referencedColumnName="id")
+     * })
+     */
+    private $idtipoidentificacion;
+
+    /**
+     * @var \Ciudades
+     *
+     * @ORM\ManyToOne(targetEntity="Ciudades")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idlugarexpedicion", referencedColumnName="id")
+     * })
+     */
+    private $idlugarexpedicion;
+
+    /**
+     * @var \Ciudades
+     *
+     * @ORM\ManyToOne(targetEntity="Ciudades")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idciudad", referencedColumnName="id")
+     * })
+     */
+    private $idciudad;
+
+    /**
+     * @var \Estados
+     *
+     * @ORM\ManyToOne(targetEntity="Estados")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idestadoregistro", referencedColumnName="id")
+     * })
+     */
+    private $idestadoregistro;
+
+    /**
+     * @var \Roles
+     *
+     * @ORM\ManyToOne(targetEntity="Roles")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idrol", referencedColumnName="id")
+     * })
+     */
+    private $idrol;
+
+    /**
+     * @var \Usuarios
+     *
+     * @ORM\ManyToOne(targetEntity="Usuarios")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idusuario", referencedColumnName="id")
+     * })
+     */
+    private $idusuario;
+
+
+}
+
