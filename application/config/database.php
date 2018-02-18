@@ -83,7 +83,7 @@ $db['default'] = array(
 	'username' => 'adminteranov',
 	'password' => 't3r4n0v2018',
 	//////////////////////////
-	'database' => 'doctrine',
+	'database' => 'acarreoexpress',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
