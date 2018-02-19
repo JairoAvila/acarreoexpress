@@ -24,17 +24,20 @@ class Registroapi extends REST_Controller {
         $request = file_get_contents('php://input');
         $pedido = json_decode($request,true);
         $em = $this->doctrine->em;
-        /*$user = new Entity\User;
-        $user->setUsername('wildlyinaccurate');
-        $user->setPassword('Passw0rd');
-        $user->setEmail('wildlyinaccurate@gmail.com');
-        $user->setGroup($group);*/
-
-        // When you have set up your database, you can persist these entities:
-        //$em->persist($paises);
-        //$em->flush();
-        $rsvp = $em->getRepository("Entity\Estados")->find(1);
-        $data = array("error"=>"", "Pais"=>$rsvp->getIdtipoestado()->getTipoestado());
+        $estado = new Entity\Estados;
+        $tipoestado = $em->getRepository("Entity\Tipoestados")->find(1);
+        if($tipoestado)
+        {
+            $estado->setIdtipoestado($tipoestado);
+            $estado->setEstado($pedido['estado']);
+            $em->persist($estado);
+            $em->flush();
+            $data = array("error"=>"", "Pais"=>$estado->getId());
+        }
+        else
+        {
+            $data = array("error"=>"Se ha producido un error");
+        }
         $this->response($data,200);
     }
 
