@@ -134,7 +134,7 @@ class Vehiculos
     private $vencimientosoat;
 
     /**
-     * @var \Estados
+     * @var Estados
      *
      * @ORM\ManyToOne(targetEntity="Estados")
      * @ORM\JoinColumns({
@@ -542,11 +542,11 @@ class Vehiculos
     /**
      * Set idestado
      *
-     * @param \Estados $idestado
+     * @param Estados $idestado
      *
      * @return Vehiculos
      */
-    public function setIdestado(\Estados $idestado = null)
+    public function setIdestado(Estados $idestado = null)
     {
         $this->idestado = $idestado;
     
@@ -556,7 +556,7 @@ class Vehiculos
     /**
      * Get idestado
      *
-     * @return \Estados
+     * @return Estados
      */
     public function getIdestado()
     {

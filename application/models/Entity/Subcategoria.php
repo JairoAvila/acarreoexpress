@@ -36,7 +36,7 @@ class Subcategoria
     private $precio;
 
     /**
-     * @var \Categorias
+     * @var Categorias
      *
      * @ORM\ManyToOne(targetEntity="Categorias")
      * @ORM\JoinColumns({
@@ -46,7 +46,7 @@ class Subcategoria
     private $idcategoria;
 
     /**
-     * @var \Estados
+     * @var Estados
      *
      * @ORM\ManyToOne(targetEntity="Estados")
      * @ORM\JoinColumns({
@@ -118,11 +118,11 @@ class Subcategoria
     /**
      * Set idcategoria
      *
-     * @param \Categorias $idcategoria
+     * @param Categorias $idcategoria
      *
      * @return Subcategoria
      */
-    public function setIdcategoria(\Categorias $idcategoria = null)
+    public function setIdcategoria(Categorias $idcategoria = null)
     {
         $this->idcategoria = $idcategoria;
     
@@ -132,7 +132,7 @@ class Subcategoria
     /**
      * Get idcategoria
      *
-     * @return \Categorias
+     * @return Categorias
      */
     public function getIdcategoria()
     {
@@ -142,11 +142,11 @@ class Subcategoria
     /**
      * Set idestado
      *
-     * @param \Estados $idestado
+     * @param Estados $idestado
      *
      * @return Subcategoria
      */
-    public function setIdestado(\Estados $idestado = null)
+    public function setIdestado(Estados $idestado = null)
     {
         $this->idestado = $idestado;
     
@@ -156,7 +156,7 @@ class Subcategoria
     /**
      * Get idestado
      *
-     * @return \Estados
+     * @return Estados
      */
     public function getIdestado()
     {

@@ -57,7 +57,7 @@ class Reservas
     private $dirllegada;
 
     /**
-     * @var \Conductores
+     * @var Conductores
      *
      * @ORM\ManyToOne(targetEntity="Conductores")
      * @ORM\JoinColumns({
@@ -67,7 +67,7 @@ class Reservas
     private $idconductor;
 
     /**
-     * @var \Estados
+     * @var Estados
      *
      * @ORM\ManyToOne(targetEntity="Estados")
      * @ORM\JoinColumns({
@@ -77,7 +77,7 @@ class Reservas
     private $idestado;
 
     /**
-     * @var \Usuarios
+     * @var Usuarios
      *
      * @ORM\ManyToOne(targetEntity="Usuarios")
      * @ORM\JoinColumns({
@@ -221,11 +221,11 @@ class Reservas
     /**
      * Set idconductor
      *
-     * @param \Conductores $idconductor
+     * @param Conductores $idconductor
      *
      * @return Reservas
      */
-    public function setIdconductor(\Conductores $idconductor = null)
+    public function setIdconductor(Conductores $idconductor = null)
     {
         $this->idconductor = $idconductor;
     
@@ -235,7 +235,7 @@ class Reservas
     /**
      * Get idconductor
      *
-     * @return \Conductores
+     * @return Conductores
      */
     public function getIdconductor()
     {
@@ -245,11 +245,11 @@ class Reservas
     /**
      * Set idestado
      *
-     * @param \Estados $idestado
+     * @param Estados $idestado
      *
      * @return Reservas
      */
-    public function setIdestado(\Estados $idestado = null)
+    public function setIdestado(Estados $idestado = null)
     {
         $this->idestado = $idestado;
     
@@ -259,7 +259,7 @@ class Reservas
     /**
      * Get idestado
      *
-     * @return \Estados
+     * @return Estados
      */
     public function getIdestado()
     {
@@ -269,11 +269,11 @@ class Reservas
     /**
      * Set idusuario
      *
-     * @param \Usuarios $idusuario
+     * @param Usuarios $idusuario
      *
      * @return Reservas
      */
-    public function setIdusuario(\Usuarios $idusuario = null)
+    public function setIdusuario(Usuarios $idusuario = null)
     {
         $this->idusuario = $idusuario;
     
@@ -283,7 +283,7 @@ class Reservas
     /**
      * Get idusuario
      *
-     * @return \Usuarios
+     * @return Usuarios
      */
     public function getIdusuario()
     {

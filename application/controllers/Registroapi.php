@@ -33,8 +33,8 @@ class Registroapi extends REST_Controller {
         // When you have set up your database, you can persist these entities:
         //$em->persist($paises);
         //$em->flush();
-        $rsvp = $em->getRepository("Entity\Paises")->find(1);
-        $data = array("error"=>"", "Pais"=>$rsvp->getId());
+        $rsvp = $em->getRepository("Entity\Estados")->find(1);
+        $data = array("error"=>"", "Pais"=>$rsvp->getIdtipoestado()->getTipoestado());
         $this->response($data,200);
     }
 

@@ -36,7 +36,7 @@ class Especificacion
     private $acceso;
 
     /**
-     * @var \Reservas
+     * @var Reservas
      *
      * @ORM\ManyToOne(targetEntity="Reservas")
      * @ORM\JoinColumns({
@@ -46,7 +46,7 @@ class Especificacion
     private $idreserva;
 
     /**
-     * @var \Numero
+     * @var Numero
      *
      * @ORM\ManyToOne(targetEntity="Numero")
      * @ORM\JoinColumns({
@@ -118,11 +118,11 @@ class Especificacion
     /**
      * Set idreserva
      *
-     * @param \Reservas $idreserva
+     * @param Reservas $idreserva
      *
      * @return Especificacion
      */
-    public function setIdreserva(\Reservas $idreserva = null)
+    public function setIdreserva(Reservas $idreserva = null)
     {
         $this->idreserva = $idreserva;
     
@@ -132,7 +132,7 @@ class Especificacion
     /**
      * Get idreserva
      *
-     * @return \Reservas
+     * @return Reservas
      */
     public function getIdreserva()
     {
@@ -142,11 +142,11 @@ class Especificacion
     /**
      * Set idpiso
      *
-     * @param \Numero $idpiso
+     * @param Numero $idpiso
      *
      * @return Especificacion
      */
-    public function setIdpiso(\Numero $idpiso = null)
+    public function setIdpiso(Numero $idpiso = null)
     {
         $this->idpiso = $idpiso;
     
@@ -156,7 +156,7 @@ class Especificacion
     /**
      * Get idpiso
      *
-     * @return \Numero
+     * @return Numero
      */
     public function getIdpiso()
     {

@@ -29,7 +29,7 @@ class Estados
     private $estado;
 
     /**
-     * @var \Tipoestados
+     * @var Tipoestados
      *
      * @ORM\ManyToOne(targetEntity="Tipoestados")
      * @ORM\JoinColumns({
@@ -77,11 +77,11 @@ class Estados
     /**
      * Set idtipoestado
      *
-     * @param \Tipoestados $idtipoestado
+     * @param Tipoestados $idtipoestado
      *
      * @return Estados
      */
-    public function setIdtipoestado(\Tipoestados $idtipoestado = null)
+    public function setIdtipoestado(Tipoestados $idtipoestado = null)
     {
         $this->idtipoestado = $idtipoestado;
     
@@ -91,7 +91,7 @@ class Estados
     /**
      * Get idtipoestado
      *
-     * @return \Tipoestados
+     * @return Tipoestados
      */
     public function getIdtipoestado()
     {

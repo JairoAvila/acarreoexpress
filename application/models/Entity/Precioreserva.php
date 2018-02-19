@@ -57,7 +57,7 @@ class Precioreserva
     private $total;
 
     /**
-     * @var \Reservas
+     * @var Reservas
      *
      * @ORM\ManyToOne(targetEntity="Reservas")
      * @ORM\JoinColumns({
@@ -67,7 +67,7 @@ class Precioreserva
     private $idreserva;
 
     /**
-     * @var \Tamanocasa
+     * @var Tamanocasa
      *
      * @ORM\ManyToOne(targetEntity="Tamanocasa")
      * @ORM\JoinColumns({
@@ -77,7 +77,7 @@ class Precioreserva
     private $idtamano;
 
     /**
-     * @var \Subcategoria
+     * @var Subcategoria
      *
      * @ORM\ManyToOne(targetEntity="Subcategoria")
      * @ORM\JoinColumns({
@@ -87,7 +87,7 @@ class Precioreserva
     private $idsubcategoria;
 
     /**
-     * @var \Ayudantes
+     * @var Ayudantes
      *
      * @ORM\ManyToOne(targetEntity="Ayudantes")
      * @ORM\JoinColumns({
@@ -231,11 +231,11 @@ class Precioreserva
     /**
      * Set idreserva
      *
-     * @param \Reservas $idreserva
+     * @param Reservas $idreserva
      *
      * @return Precioreserva
      */
-    public function setIdreserva(\Reservas $idreserva = null)
+    public function setIdreserva(Reservas $idreserva = null)
     {
         $this->idreserva = $idreserva;
     
@@ -245,7 +245,7 @@ class Precioreserva
     /**
      * Get idreserva
      *
-     * @return \Reservas
+     * @return Reservas
      */
     public function getIdreserva()
     {
@@ -255,11 +255,11 @@ class Precioreserva
     /**
      * Set idtamano
      *
-     * @param \Tamanocasa $idtamano
+     * @param Tamanocasa $idtamano
      *
      * @return Precioreserva
      */
-    public function setIdtamano(\Tamanocasa $idtamano = null)
+    public function setIdtamano(Tamanocasa $idtamano = null)
     {
         $this->idtamano = $idtamano;
     
@@ -269,7 +269,7 @@ class Precioreserva
     /**
      * Get idtamano
      *
-     * @return \Tamanocasa
+     * @return Tamanocasa
      */
     public function getIdtamano()
     {
@@ -279,11 +279,11 @@ class Precioreserva
     /**
      * Set idsubcategoria
      *
-     * @param \Subcategoria $idsubcategoria
+     * @param Subcategoria $idsubcategoria
      *
      * @return Precioreserva
      */
-    public function setIdsubcategoria(\Subcategoria $idsubcategoria = null)
+    public function setIdsubcategoria(Subcategoria $idsubcategoria = null)
     {
         $this->idsubcategoria = $idsubcategoria;
     
@@ -293,7 +293,7 @@ class Precioreserva
     /**
      * Get idsubcategoria
      *
-     * @return \Subcategoria
+     * @return Subcategoria
      */
     public function getIdsubcategoria()
     {
@@ -303,11 +303,11 @@ class Precioreserva
     /**
      * Set idayudantes
      *
-     * @param \Ayudantes $idayudantes
+     * @param Ayudantes $idayudantes
      *
      * @return Precioreserva
      */
-    public function setIdayudantes(\Ayudantes $idayudantes = null)
+    public function setIdayudantes(Ayudantes $idayudantes = null)
     {
         $this->idayudantes = $idayudantes;
     
@@ -317,7 +317,7 @@ class Precioreserva
     /**
      * Get idayudantes
      *
-     * @return \Ayudantes
+     * @return Ayudantes
      */
     public function getIdayudantes()
     {

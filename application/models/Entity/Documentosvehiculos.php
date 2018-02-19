@@ -78,7 +78,7 @@ class Documentosvehiculos
     private $updatedAt;
 
     /**
-     * @var \Vehiculos
+     * @var Vehiculos
      *
      * @ORM\ManyToOne(targetEntity="Vehiculos")
      * @ORM\JoinColumns({
@@ -88,7 +88,7 @@ class Documentosvehiculos
     private $idvehiculo;
 
     /**
-     * @var \Estados
+     * @var Estados
      *
      * @ORM\ManyToOne(targetEntity="Estados")
      * @ORM\JoinColumns({
@@ -304,11 +304,11 @@ class Documentosvehiculos
     /**
      * Set idvehiculo
      *
-     * @param \Vehiculos $idvehiculo
+     * @param Vehiculos $idvehiculo
      *
      * @return Documentosvehiculos
      */
-    public function setIdvehiculo(\Vehiculos $idvehiculo = null)
+    public function setIdvehiculo(Vehiculos $idvehiculo = null)
     {
         $this->idvehiculo = $idvehiculo;
     
@@ -318,7 +318,7 @@ class Documentosvehiculos
     /**
      * Get idvehiculo
      *
-     * @return \Vehiculos
+     * @return Vehiculos
      */
     public function getIdvehiculo()
     {
@@ -328,11 +328,11 @@ class Documentosvehiculos
     /**
      * Set idestado
      *
-     * @param \Estados $idestado
+     * @param Estados $idestado
      *
      * @return Documentosvehiculos
      */
-    public function setIdestado(\Estados $idestado = null)
+    public function setIdestado(Estados $idestado = null)
     {
         $this->idestado = $idestado;
     
@@ -342,7 +342,7 @@ class Documentosvehiculos
     /**
      * Get idestado
      *
-     * @return \Estados
+     * @return Estados
      */
     public function getIdestado()
     {

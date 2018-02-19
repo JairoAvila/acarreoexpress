@@ -36,7 +36,7 @@ class Categorias
     private $precio;
 
     /**
-     * @var \Estados
+     * @var Estados
      *
      * @ORM\ManyToOne(targetEntity="Estados")
      * @ORM\JoinColumns({
@@ -108,11 +108,11 @@ class Categorias
     /**
      * Set idestado
      *
-     * @param \Estados $idestado
+     * @param Estados $idestado
      *
      * @return Categorias
      */
-    public function setIdestado(\Estados $idestado = null)
+    public function setIdestado(Estados $idestado = null)
     {
         $this->idestado = $idestado;
     
@@ -122,7 +122,7 @@ class Categorias
     /**
      * Get idestado
      *
-     * @return \Estados
+     * @return Estados
      */
     public function getIdestado()
     {

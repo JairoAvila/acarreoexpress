@@ -43,7 +43,7 @@ class Historialpagos
     private $numtransaccion;
 
     /**
-     * @var \Registros
+     * @var Registros
      *
      * @ORM\ManyToOne(targetEntity="Registros")
      * @ORM\JoinColumns({
@@ -53,7 +53,7 @@ class Historialpagos
     private $idregistro;
 
     /**
-     * @var \Mediopago
+     * @var Mediopago
      *
      * @ORM\ManyToOne(targetEntity="Mediopago")
      * @ORM\JoinColumns({
@@ -63,7 +63,7 @@ class Historialpagos
     private $idmediopago;
 
     /**
-     * @var \Estados
+     * @var Estados
      *
      * @ORM\ManyToOne(targetEntity="Estados")
      * @ORM\JoinColumns({
@@ -159,11 +159,11 @@ class Historialpagos
     /**
      * Set idregistro
      *
-     * @param \Registros $idregistro
+     * @param Registros $idregistro
      *
      * @return Historialpagos
      */
-    public function setIdregistro(\Registros $idregistro = null)
+    public function setIdregistro(Registros $idregistro = null)
     {
         $this->idregistro = $idregistro;
     
@@ -173,7 +173,7 @@ class Historialpagos
     /**
      * Get idregistro
      *
-     * @return \Registros
+     * @return Registros
      */
     public function getIdregistro()
     {
@@ -183,11 +183,11 @@ class Historialpagos
     /**
      * Set idmediopago
      *
-     * @param \Mediopago $idmediopago
+     * @param Mediopago $idmediopago
      *
      * @return Historialpagos
      */
-    public function setIdmediopago(\Mediopago $idmediopago = null)
+    public function setIdmediopago(Mediopago $idmediopago = null)
     {
         $this->idmediopago = $idmediopago;
     
@@ -197,7 +197,7 @@ class Historialpagos
     /**
      * Get idmediopago
      *
-     * @return \Mediopago
+     * @return Mediopago
      */
     public function getIdmediopago()
     {
@@ -207,11 +207,11 @@ class Historialpagos
     /**
      * Set idestado
      *
-     * @param \Estados $idestado
+     * @param Estados $idestado
      *
      * @return Historialpagos
      */
-    public function setIdestado(\Estados $idestado = null)
+    public function setIdestado(Estados $idestado = null)
     {
         $this->idestado = $idestado;
     
@@ -221,7 +221,7 @@ class Historialpagos
     /**
      * Get idestado
      *
-     * @return \Estados
+     * @return Estados
      */
     public function getIdestado()
     {

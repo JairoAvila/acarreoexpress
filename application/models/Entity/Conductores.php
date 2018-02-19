@@ -43,7 +43,7 @@ class Conductores
     private $vencimientolicencia;
 
     /**
-     * @var \Registros
+     * @var Registros
      *
      * @ORM\ManyToOne(targetEntity="Registros")
      * @ORM\JoinColumns({
@@ -53,7 +53,7 @@ class Conductores
     private $idregistro;
 
     /**
-     * @var \Vehiculos
+     * @var Vehiculos
      *
      * @ORM\ManyToOne(targetEntity="Vehiculos")
      * @ORM\JoinColumns({
@@ -63,7 +63,7 @@ class Conductores
     private $idvehiculo;
 
     /**
-     * @var \Empresa
+     * @var Empresa
      *
      * @ORM\ManyToOne(targetEntity="Empresa")
      * @ORM\JoinColumns({
@@ -159,11 +159,11 @@ class Conductores
     /**
      * Set idregistro
      *
-     * @param \Registros $idregistro
+     * @param Registros $idregistro
      *
      * @return Conductores
      */
-    public function setIdregistro(\Registros $idregistro = null)
+    public function setIdregistro(Registros $idregistro = null)
     {
         $this->idregistro = $idregistro;
     
@@ -173,7 +173,7 @@ class Conductores
     /**
      * Get idregistro
      *
-     * @return \Registros
+     * @return Registros
      */
     public function getIdregistro()
     {
@@ -183,11 +183,11 @@ class Conductores
     /**
      * Set idvehiculo
      *
-     * @param \Vehiculos $idvehiculo
+     * @param Vehiculos $idvehiculo
      *
      * @return Conductores
      */
-    public function setIdvehiculo(\Vehiculos $idvehiculo = null)
+    public function setIdvehiculo(Vehiculos $idvehiculo = null)
     {
         $this->idvehiculo = $idvehiculo;
     
@@ -197,7 +197,7 @@ class Conductores
     /**
      * Get idvehiculo
      *
-     * @return \Vehiculos
+     * @return Vehiculos
      */
     public function getIdvehiculo()
     {
@@ -207,11 +207,11 @@ class Conductores
     /**
      * Set idempresa
      *
-     * @param \Empresa $idempresa
+     * @param Empresa $idempresa
      *
      * @return Conductores
      */
-    public function setIdempresa(\Empresa $idempresa = null)
+    public function setIdempresa(Empresa $idempresa = null)
     {
         $this->idempresa = $idempresa;
     
@@ -221,7 +221,7 @@ class Conductores
     /**
      * Get idempresa
      *
-     * @return \Empresa
+     * @return Empresa
      */
     public function getIdempresa()
     {

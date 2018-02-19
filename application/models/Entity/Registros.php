@@ -92,7 +92,7 @@ class Registros
     private $billetera;
 
     /**
-     * @var \Paises
+     * @var Paises
      *
      * @ORM\ManyToOne(targetEntity="Paises")
      * @ORM\JoinColumns({
@@ -102,7 +102,7 @@ class Registros
     private $idpais;
 
     /**
-     * @var \Tipoidentificacion
+     * @var Tipoidentificacion
      *
      * @ORM\ManyToOne(targetEntity="Tipoidentificacion")
      * @ORM\JoinColumns({
@@ -112,7 +112,7 @@ class Registros
     private $idtipoidentificacion;
 
     /**
-     * @var \Ciudades
+     * @var Ciudades
      *
      * @ORM\ManyToOne(targetEntity="Ciudades")
      * @ORM\JoinColumns({
@@ -122,7 +122,7 @@ class Registros
     private $idlugarexpedicion;
 
     /**
-     * @var \Ciudades
+     * @var Ciudades
      *
      * @ORM\ManyToOne(targetEntity="Ciudades")
      * @ORM\JoinColumns({
@@ -132,7 +132,7 @@ class Registros
     private $idciudad;
 
     /**
-     * @var \Estados
+     * @var Estados
      *
      * @ORM\ManyToOne(targetEntity="Estados")
      * @ORM\JoinColumns({
@@ -142,7 +142,7 @@ class Registros
     private $idestadoregistro;
 
     /**
-     * @var \Roles
+     * @var Roles
      *
      * @ORM\ManyToOne(targetEntity="Roles")
      * @ORM\JoinColumns({
@@ -152,7 +152,7 @@ class Registros
     private $idrol;
 
     /**
-     * @var \Usuarios
+     * @var Usuarios
      *
      * @ORM\ManyToOne(targetEntity="Usuarios")
      * @ORM\JoinColumns({
@@ -416,11 +416,11 @@ class Registros
     /**
      * Set idpais
      *
-     * @param \Paises $idpais
+     * @param Paises $idpais
      *
      * @return Registros
      */
-    public function setIdpais(\Paises $idpais = null)
+    public function setIdpais(Paises $idpais = null)
     {
         $this->idpais = $idpais;
     
@@ -430,7 +430,7 @@ class Registros
     /**
      * Get idpais
      *
-     * @return \Paises
+     * @return Paises
      */
     public function getIdpais()
     {
@@ -440,11 +440,11 @@ class Registros
     /**
      * Set idtipoidentificacion
      *
-     * @param \Tipoidentificacion $idtipoidentificacion
+     * @param Tipoidentificacion $idtipoidentificacion
      *
      * @return Registros
      */
-    public function setIdtipoidentificacion(\Tipoidentificacion $idtipoidentificacion = null)
+    public function setIdtipoidentificacion(Tipoidentificacion $idtipoidentificacion = null)
     {
         $this->idtipoidentificacion = $idtipoidentificacion;
     
@@ -454,7 +454,7 @@ class Registros
     /**
      * Get idtipoidentificacion
      *
-     * @return \Tipoidentificacion
+     * @return Tipoidentificacion
      */
     public function getIdtipoidentificacion()
     {
@@ -464,11 +464,11 @@ class Registros
     /**
      * Set idlugarexpedicion
      *
-     * @param \Ciudades $idlugarexpedicion
+     * @param Ciudades $idlugarexpedicion
      *
      * @return Registros
      */
-    public function setIdlugarexpedicion(\Ciudades $idlugarexpedicion = null)
+    public function setIdlugarexpedicion(Ciudades $idlugarexpedicion = null)
     {
         $this->idlugarexpedicion = $idlugarexpedicion;
     
@@ -478,7 +478,7 @@ class Registros
     /**
      * Get idlugarexpedicion
      *
-     * @return \Ciudades
+     * @return Ciudades
      */
     public function getIdlugarexpedicion()
     {
@@ -488,11 +488,11 @@ class Registros
     /**
      * Set idciudad
      *
-     * @param \Ciudades $idciudad
+     * @param Ciudades $idciudad
      *
      * @return Registros
      */
-    public function setIdciudad(\Ciudades $idciudad = null)
+    public function setIdciudad(Ciudades $idciudad = null)
     {
         $this->idciudad = $idciudad;
     
@@ -502,7 +502,7 @@ class Registros
     /**
      * Get idciudad
      *
-     * @return \Ciudades
+     * @return Ciudades
      */
     public function getIdciudad()
     {
@@ -512,11 +512,11 @@ class Registros
     /**
      * Set idestadoregistro
      *
-     * @param \Estados $idestadoregistro
+     * @param Estados $idestadoregistro
      *
      * @return Registros
      */
-    public function setIdestadoregistro(\Estados $idestadoregistro = null)
+    public function setIdestadoregistro(Estados $idestadoregistro = null)
     {
         $this->idestadoregistro = $idestadoregistro;
     
@@ -526,7 +526,7 @@ class Registros
     /**
      * Get idestadoregistro
      *
-     * @return \Estados
+     * @return Estados
      */
     public function getIdestadoregistro()
     {
@@ -536,11 +536,11 @@ class Registros
     /**
      * Set idrol
      *
-     * @param \Roles $idrol
+     * @param Roles $idrol
      *
      * @return Registros
      */
-    public function setIdrol(\Roles $idrol = null)
+    public function setIdrol(Roles $idrol = null)
     {
         $this->idrol = $idrol;
     
@@ -550,7 +550,7 @@ class Registros
     /**
      * Get idrol
      *
-     * @return \Roles
+     * @return Roles
      */
     public function getIdrol()
     {
@@ -560,11 +560,11 @@ class Registros
     /**
      * Set idusuario
      *
-     * @param \Usuarios $idusuario
+     * @param Usuarios $idusuario
      *
      * @return Registros
      */
-    public function setIdusuario(\Usuarios $idusuario = null)
+    public function setIdusuario(Usuarios $idusuario = null)
     {
         $this->idusuario = $idusuario;
     
@@ -574,7 +574,7 @@ class Registros
     /**
      * Get idusuario
      *
-     * @return \Usuarios
+     * @return Usuarios
      */
     public function getIdusuario()
     {

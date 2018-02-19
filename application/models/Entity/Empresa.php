@@ -57,7 +57,7 @@ class Empresa
     private $email;
 
     /**
-     * @var \Ciudades
+     * @var Ciudades
      *
      * @ORM\ManyToOne(targetEntity="Ciudades")
      * @ORM\JoinColumns({
@@ -201,11 +201,11 @@ class Empresa
     /**
      * Set idciudad
      *
-     * @param \Ciudades $idciudad
+     * @param Ciudades $idciudad
      *
      * @return Empresa
      */
-    public function setIdciudad(\Ciudades $idciudad = null)
+    public function setIdciudad(Ciudades $idciudad = null)
     {
         $this->idciudad = $idciudad;
     
@@ -215,7 +215,7 @@ class Empresa
     /**
      * Get idciudad
      *
-     * @return \Ciudades
+     * @return Ciudades
      */
     public function getIdciudad()
     {
