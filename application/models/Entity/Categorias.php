@@ -24,14 +24,14 @@ class Categorias
     /**
      * @var string
      *
-     * @ORM\Column(name="nombre", type="string", length=50, nullable=false)
+     * @ORM\Column(name="nombre", type="string", length=50, nullable=true)
      */
     private $nombre;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="precio", type="string", length=50, nullable=false)
+     * @ORM\Column(name="precio", type="string", length=50, nullable=true)
      */
     private $precio;
 

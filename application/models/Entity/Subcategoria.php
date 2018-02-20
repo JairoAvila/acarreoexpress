@@ -24,14 +24,14 @@ class Subcategoria
     /**
      * @var string
      *
-     * @ORM\Column(name="nombre", type="string", length=50, nullable=false)
+     * @ORM\Column(name="nombre", type="string", length=50, nullable=true)
      */
     private $nombre;
 
     /**
      * @var integer
      *
-     * @ORM\Column(name="precio", type="integer", nullable=false)
+     * @ORM\Column(name="precio", type="integer", nullable=true)
      */
     private $precio;
 

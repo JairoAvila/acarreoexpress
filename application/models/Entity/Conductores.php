@@ -24,21 +24,21 @@ class Conductores
     /**
      * @var string
      *
-     * @ORM\Column(name="numerolicencia", type="string", length=50, nullable=false)
+     * @ORM\Column(name="numerolicencia", type="string", length=50, nullable=true)
      */
     private $numerolicencia;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="expidelicencia", type="string", length=50, nullable=false)
+     * @ORM\Column(name="expidelicencia", type="string", length=50, nullable=true)
      */
     private $expidelicencia;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="vencimientolicencia", type="string", length=50, nullable=false)
+     * @ORM\Column(name="vencimientolicencia", type="string", length=50, nullable=true)
      */
     private $vencimientolicencia;
 

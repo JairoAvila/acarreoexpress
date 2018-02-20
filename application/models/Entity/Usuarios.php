@@ -24,28 +24,28 @@ class Usuarios
     /**
      * @var string
      *
-     * @ORM\Column(name="email", type="string", length=50, nullable=false)
+     * @ORM\Column(name="email", type="string", length=50, nullable=true)
      */
     private $email;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="password", type="string", length=50, nullable=false)
+     * @ORM\Column(name="password", type="string", length=150, nullable=true)
      */
     private $password;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="token", type="string", length=50, nullable=false)
+     * @ORM\Column(name="token", type="string", length=150, nullable=true)
      */
     private $token;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="device", type="string", length=50, nullable=false)
+     * @ORM\Column(name="device", type="string", length=150, nullable=true)
      */
     private $device;
 

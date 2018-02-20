@@ -24,7 +24,7 @@ class Mediopago
     /**
      * @var string
      *
-     * @ORM\Column(name="medio", type="string", length=5, nullable=false)
+     * @ORM\Column(name="medio", type="string", length=5, nullable=true)
      */
     private $medio;
 

@@ -24,112 +24,112 @@ class Vehiculos
     /**
      * @var string
      *
-     * @ORM\Column(name="placa", type="string", length=50, nullable=false)
+     * @ORM\Column(name="placa", type="string", length=50, nullable=true)
      */
     private $placa;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="modelo", type="string", length=50, nullable=false)
+     * @ORM\Column(name="modelo", type="string", length=50, nullable=true)
      */
     private $modelo;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="marcar", type="string", length=50, nullable=false)
+     * @ORM\Column(name="marcar", type="string", length=50, nullable=true)
      */
     private $marcar;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="color", type="string", length=50, nullable=false)
+     * @ORM\Column(name="color", type="string", length=50, nullable=true)
      */
     private $color;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="tarjetapropiedad", type="string", length=50, nullable=false)
+     * @ORM\Column(name="tarjetapropiedad", type="string", length=50, nullable=true)
      */
     private $tarjetapropiedad;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="capacidad", type="string", length=50, nullable=false)
+     * @ORM\Column(name="capacidad", type="string", length=50, nullable=true)
      */
     private $capacidad;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="numerochasis", type="string", length=50, nullable=false)
+     * @ORM\Column(name="numerochasis", type="string", length=50, nullable=true)
      */
     private $numerochasis;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="numerotarjetaoperacion", type="string", length=50, nullable=false)
+     * @ORM\Column(name="numerotarjetaoperacion", type="string", length=50, nullable=true)
      */
     private $numerotarjetaoperacion;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="expidetarjetaoperacion", type="date", nullable=false)
+     * @ORM\Column(name="expidetarjetaoperacion", type="date", nullable=true)
      */
     private $expidetarjetaoperacion;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="vencimientotarjetaoperacion", type="date", nullable=false)
+     * @ORM\Column(name="vencimientotarjetaoperacion", type="date", nullable=true)
      */
     private $vencimientotarjetaoperacion;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="numerotecnomecanica", type="string", length=50, nullable=false)
+     * @ORM\Column(name="numerotecnomecanica", type="string", length=50, nullable=true)
      */
     private $numerotecnomecanica;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="expidetecnomecanica", type="date", nullable=false)
+     * @ORM\Column(name="expidetecnomecanica", type="date", nullable=true)
      */
     private $expidetecnomecanica;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="vencimientotecnomecanica", type="date", nullable=false)
+     * @ORM\Column(name="vencimientotecnomecanica", type="date", nullable=true)
      */
     private $vencimientotecnomecanica;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="numerosoat", type="string", length=50, nullable=false)
+     * @ORM\Column(name="numerosoat", type="string", length=50, nullable=true)
      */
     private $numerosoat;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="expidesoat", type="date", nullable=false)
+     * @ORM\Column(name="expidesoat", type="date", nullable=true)
      */
     private $expidesoat;
 
     /**
      * @var integer
      *
-     * @ORM\Column(name="vencimientosoat", type="integer", nullable=false)
+     * @ORM\Column(name="vencimientosoat", type="integer", nullable=true)
      */
     private $vencimientosoat;
 

@@ -24,56 +24,56 @@ class Documentosvehiculos
     /**
      * @var string
      *
-     * @ORM\Column(name="pathlicencia", type="string", length=50, nullable=false)
+     * @ORM\Column(name="pathlicencia", type="string", length=50, nullable=true)
      */
     private $pathlicencia;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="pathtarjetapropiedad", type="string", length=50, nullable=false)
+     * @ORM\Column(name="pathtarjetapropiedad", type="string", length=50, nullable=true)
      */
     private $pathtarjetapropiedad;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="pathtarjetaoperacion", type="string", length=50, nullable=false)
+     * @ORM\Column(name="pathtarjetaoperacion", type="string", length=50, nullable=true)
      */
     private $pathtarjetaoperacion;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="pathsoat", type="string", length=50, nullable=false)
+     * @ORM\Column(name="pathsoat", type="string", length=50, nullable=true)
      */
     private $pathsoat;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="pathtecnomecanica", type="string", length=50, nullable=false)
+     * @ORM\Column(name="pathtecnomecanica", type="string", length=50, nullable=true)
      */
     private $pathtecnomecanica;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="cedulaconductor", type="string", length=50, nullable=false)
+     * @ORM\Column(name="cedulaconductor", type="string", length=50, nullable=true)
      */
     private $cedulaconductor;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="created_at", type="date", nullable=false)
+     * @ORM\Column(name="created_at", type="date", nullable=true)
      */
     private $createdAt;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="updated_at", type="date", nullable=false)
+     * @ORM\Column(name="updated_at", type="date", nullable=true)
      */
     private $updatedAt;
 

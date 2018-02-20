@@ -24,14 +24,14 @@ class Especificacion
     /**
      * @var integer
      *
-     * @ORM\Column(name="NewAttribute", type="integer", nullable=false)
+     * @ORM\Column(name="NewAttribute", type="integer", nullable=true)
      */
     private $newattribute;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="acceso", type="string", length=50, nullable=false)
+     * @ORM\Column(name="acceso", type="string", length=50, nullable=true)
      */
     private $acceso;
 

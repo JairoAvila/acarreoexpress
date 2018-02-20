@@ -24,21 +24,21 @@ class Tamanocasa
     /**
      * @var integer
      *
-     * @ORM\Column(name="tamanoinicio", type="integer", nullable=false)
+     * @ORM\Column(name="tamanoinicio", type="integer", nullable=true)
      */
     private $tamanoinicio;
 
     /**
      * @var integer
      *
-     * @ORM\Column(name="tamanofinal", type="integer", nullable=false)
+     * @ORM\Column(name="tamanofinal", type="integer", nullable=true)
      */
     private $tamanofinal;
 
     /**
      * @var integer
      *
-     * @ORM\Column(name="precio", type="integer", nullable=false)
+     * @ORM\Column(name="precio", type="integer", nullable=true)
      */
     private $precio;
 

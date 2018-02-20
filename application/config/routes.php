@@ -49,13 +49,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'registroapis';
+$route['default_controller'] = '';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-//API
-$route['registroapis']['post'] = 'registroapis/index';
-$route['registroapis']['post'] = 'registroapis/nuevoPais';
+//Escenario registro
+$route['registroapi']['post'] = 'registroapi/registro';
+$route['registroapi']['post'] = 'registroapi/login';
 
-
+//Escenario consulta
+$route['consultaapi']['post'] = 'consultaapi/pais';
+$route['consultaapi']['post'] = 'consultaapi/tipoidentificacion';
+$route['consultaapi']['post'] = 'consultaapi/ciudad';
+$route['consultaapi']['post'] = 'consultaapi/rol';
 

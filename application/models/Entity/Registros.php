@@ -24,70 +24,70 @@ class Registros
     /**
      * @var string
      *
-     * @ORM\Column(name="nombres", type="string", length=50, nullable=false)
+     * @ORM\Column(name="nombres", type="string", length=50, nullable=true)
      */
     private $nombres;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="apellidos", type="string", length=50, nullable=false)
+     * @ORM\Column(name="apellidos", type="string", length=50, nullable=true)
      */
     private $apellidos;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="identificacion", type="string", length=50, nullable=false)
+     * @ORM\Column(name="identificacion", type="string", length=50, nullable=true)
      */
     private $identificacion;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="nacimiento", type="string", length=50, nullable=false)
+     * @ORM\Column(name="nacimiento", type="string", length=50, nullable=true)
      */
     private $nacimiento;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="direccion", type="string", length=50, nullable=false)
+     * @ORM\Column(name="direccion", type="string", length=50, nullable=true)
      */
     private $direccion;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="telefono", type="string", length=50, nullable=false)
+     * @ORM\Column(name="telefono", type="string", length=50, nullable=true)
      */
     private $telefono;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="pathimage", type="string", length=100, nullable=false)
+     * @ORM\Column(name="pathimage", type="string", length=100, nullable=true)
      */
     private $pathimage;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="created_at", type="date", nullable=false)
+     * @ORM\Column(name="created_at", type="date", nullable=true)
      */
     private $createdAt;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="updated_at", type="date", nullable=false)
+     * @ORM\Column(name="updated_at", type="date", nullable=true)
      */
     private $updatedAt;
 
     /**
      * @var integer
      *
-     * @ORM\Column(name="billetera", type="integer", nullable=false)
+     * @ORM\Column(name="billetera", type="integer", nullable=true)
      */
     private $billetera;
 

@@ -24,7 +24,7 @@ class Tipoidentificacion
     /**
      * @var string
      *
-     * @ORM\Column(name="tipo", type="string", length=50, nullable=false)
+     * @ORM\Column(name="tipo", type="string", length=50, nullable=true)
      */
     private $tipo;
 

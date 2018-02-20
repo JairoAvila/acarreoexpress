@@ -24,14 +24,14 @@ class Ayudantes
     /**
      * @var integer
      *
-     * @ORM\Column(name="numero", type="integer", nullable=false)
+     * @ORM\Column(name="numero", type="integer", nullable=true)
      */
     private $numero;
 
     /**
      * @var integer
      *
-     * @ORM\Column(name="precio", type="integer", nullable=false)
+     * @ORM\Column(name="precio", type="integer", nullable=true)
      */
     private $precio;
 

@@ -24,35 +24,35 @@ class Empresa
     /**
      * @var string
      *
-     * @ORM\Column(name="nombre", type="string", length=50, nullable=false)
+     * @ORM\Column(name="nombre", type="string", length=50, nullable=true)
      */
     private $nombre;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="NIT", type="string", length=50, nullable=false)
+     * @ORM\Column(name="NIT", type="string", length=50, nullable=true)
      */
     private $nit;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="responsable", type="string", length=50, nullable=false)
+     * @ORM\Column(name="responsable", type="string", length=50, nullable=true)
      */
     private $responsable;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="telefono", type="string", length=50, nullable=false)
+     * @ORM\Column(name="telefono", type="string", length=50, nullable=true)
      */
     private $telefono;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="email", type="string", length=50, nullable=false)
+     * @ORM\Column(name="email", type="string", length=50, nullable=true)
      */
     private $email;
 

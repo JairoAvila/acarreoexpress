@@ -24,35 +24,35 @@ class Reservas
     /**
      * @var string
      *
-     * @ORM\Column(name="descripcion", type="string", length=50, nullable=false)
+     * @ORM\Column(name="descripcion", type="string", length=50, nullable=true)
      */
     private $descripcion;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="aksalida", type="string", length=50, nullable=false)
+     * @ORM\Column(name="aksalida", type="string", length=50, nullable=true)
      */
     private $aksalida;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="dirsalida", type="string", length=50, nullable=false)
+     * @ORM\Column(name="dirsalida", type="string", length=50, nullable=true)
      */
     private $dirsalida;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="akllegada", type="string", length=50, nullable=false)
+     * @ORM\Column(name="akllegada", type="string", length=50, nullable=true)
      */
     private $akllegada;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="dirllegada", type="string", length=50, nullable=false)
+     * @ORM\Column(name="dirllegada", type="string", length=50, nullable=true)
      */
     private $dirllegada;
 

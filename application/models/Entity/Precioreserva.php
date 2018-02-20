@@ -24,35 +24,35 @@ class Precioreserva
     /**
      * @var string
      *
-     * @ORM\Column(name="embajale", type="string", length=50, nullable=false)
+     * @ORM\Column(name="embajale", type="string", length=50, nullable=true)
      */
     private $embajale;
 
     /**
      * @var float
      *
-     * @ORM\Column(name="distancia", type="float", precision=10, scale=0, nullable=false)
+     * @ORM\Column(name="distancia", type="float", precision=10, scale=0, nullable=true)
      */
     private $distancia;
 
     /**
      * @var integer
      *
-     * @ORM\Column(name="seguro", type="integer", nullable=false)
+     * @ORM\Column(name="seguro", type="integer", nullable=true)
      */
     private $seguro;
 
     /**
      * @var integer
      *
-     * @ORM\Column(name="porcentaje", type="integer", nullable=false)
+     * @ORM\Column(name="porcentaje", type="integer", nullable=true)
      */
     private $porcentaje;
 
     /**
      * @var integer
      *
-     * @ORM\Column(name="total", type="integer", nullable=false)
+     * @ORM\Column(name="total", type="integer", nullable=true)
      */
     private $total;
 

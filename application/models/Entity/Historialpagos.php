@@ -24,21 +24,21 @@ class Historialpagos
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="fecharecarga", type="date", nullable=false)
+     * @ORM\Column(name="fecharecarga", type="date", nullable=true)
      */
     private $fecharecarga;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="valorrecarga", type="string", length=50, nullable=false)
+     * @ORM\Column(name="valorrecarga", type="string", length=50, nullable=true)
      */
     private $valorrecarga;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="numtransaccion", type="string", length=50, nullable=false)
+     * @ORM\Column(name="numtransaccion", type="string", length=50, nullable=true)
      */
     private $numtransaccion;
 
