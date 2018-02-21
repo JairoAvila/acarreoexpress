@@ -56,6 +56,8 @@ $route['translate_uri_dashes'] = FALSE;
 //Escenario registro
 $route['registroapi']['post'] = 'registroapi/registro';
 $route['registroapi']['post'] = 'registroapi/login';
+$route['registroapi']['post'] = 'registroapi/forgotpassword';
+$route['registroapi']['post'] = 'registroapi/perfilusuario';
 
 //Escenario consulta
 $route['consultaapi']['post'] = 'consultaapi/pais';

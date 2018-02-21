@@ -112,7 +112,7 @@ class Registroapi extends REST_Controller {
             $psd = $this->encrypt->decode($usuarioExistente->getPassword());
             if($psd == $pedido['password'])
             {
-                $registro = $em->getRepository("Entity\Registros")->find($usuarioExistente->getId());
+                $registro = $em->getRepository("Entity\Registros")->findOneBy(array('idusuario' => $usuarioExistente->getId()));
                 if($registro)
                 {
                     $data=array("error"=>"", "token"=>$usuarioExistente->getToken(), "rol"=>$registro->getIdrol()->getId());
@@ -125,6 +125,69 @@ class Registroapi extends REST_Controller {
             else
             {
                 $data=array("error"=>"2");
+            }
+        }
+        else
+        {
+            $data=array("error"=>"1"); 
+        }
+        $this->response($data,200);
+    }
+
+    public function forgotpassword_post()
+    {
+        $this->load->library('doctrine');
+
+        $request = file_get_contents('php://input');
+        $pedido = json_decode($request,true);
+        $em = $this->doctrine->em;
+
+        $config = array(
+         'protocol' => 'smtp',
+         'smtp_host' => 'smtp.googlemail.com',
+         'smtp_user' => 'jairofavila@gmail.com', //Su Correo de Gmail Aqui
+         'smtp_pass' => '201010050292010', // Su Password de Gmail aqui
+         'smtp_port' => '465',
+         'smtp_crypto' => 'ssl',
+         'mailtype' => 'html',
+         'wordwrap' => TRUE,
+         'charset' => 'utf-8'
+         );
+         $this->load->library('email', $config);
+         $this->email->set_newline("\r\n");
+         $this->email->from('jairofavila@gmail.com');
+         $this->email->subject('Asunto del correo');
+         $this->email->message('Hola desde correo');
+         $this->email->to('jairofavila@gmail.com');
+         if($this->email->send(FALSE)){
+             echo "enviado<br/>";
+             echo $this->email->print_debugger(array('headers'));
+         }else {
+             echo "fallo <br/>";
+             echo "error: ".$this->email->print_debugger(array('headers'));
+         }
+
+        $this->response("JAIRO",200);
+    }
+
+    public function perfilusuario_post()
+    {
+        $this->load->library('doctrine');
+        $this->load->library('encrypt');
+        $request = file_get_contents('php://input');
+        $pedido = json_decode($request,true);
+        $em = $this->doctrine->em;
+        $usuario = $em->getRepository("Entity\Usuarios")->findOneBy(array("token"=>$pedido['token']));
+        if($usuario)
+        {
+            $registro = $em->getRepository("Entity\Registros")->findOneBy(array('idusuario' => $usuario->getId()));
+            if($registro)
+            {
+                $data=array("error"=>"","nombres"=>$registro->getNombres(), "apellidos"=>$registro->getApellidos(), "identificacion"=>$registro->getIdentificacion(), "direccion"=>$registro->getDireccion(), "path"=> $registro->getPathimage(), "idpais"=>$registro->getIdpais()->getId(), "idtipoidentificacion"=>$registro->getIdtipoidentificacion()->getId(), "idexpedicion"=>$registro->getIdlugarexpedicion()->getId(), "idciudad"=>$registro->getIdciudad()->getId());
+            }
+            else
+            {
+                $data=array("error"=>"2"); 
             }
         }
         else
